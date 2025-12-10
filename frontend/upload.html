@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload File</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Upload File</h2>
+
+  <input type="file" id="fileInput">
+  <select id="privacy">
+      <option value="public">Public</option>
+      <option value="private">Private</option>
+  </select>
+
+  <button onclick="uploadFile()">Upload</button><br><br>
+
+  <button onclick="location.href='myfiles.html'">My Files</button>
+  <button onclick="location.href='downloads.html'">Public Downloads</button>
+</div>
+
+<script src="js/upload.js"></script>
+</body>
+</html>
