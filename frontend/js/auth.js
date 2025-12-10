@@ -1,5 +1,6 @@
 const API = "http://localhost:3000/api";
 
+// REGISTER
 async function registerUser() {
     const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
@@ -19,6 +20,7 @@ async function registerUser() {
     }
 }
 
+// LOGIN
 async function login() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -38,4 +40,18 @@ async function login() {
 
     localStorage.setItem("token", result.token);
     window.location.href = "upload.html";
+}
+
+// LOGOUT
+function logout() {
+    localStorage.removeItem("token");
+    window.location.href = "index.html";
+}
+
+// FUNCTION TO PROTECT PAGES
+function checkAuth() {
+    if (!localStorage.getItem("token")) {
+        alert("You must login first");
+        window.location.href = "index.html";
+    }
 }

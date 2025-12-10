@@ -1,4 +1,5 @@
 const API = "http://localhost:3000/api";
+checkAuth();
 
 async function uploadFile() {
     const file = document.getElementById("fileInput").files[0];

@@ -1,4 +1,5 @@
 const API = "http://localhost:3000/api";
+checkAuth();
 
 async function loadPublicFiles() {
   const response = await fetch(`${API}/public-files`);
